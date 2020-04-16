@@ -1,0 +1,14 @@
+#
+# Change the default number of workers (in multithreading mode) 
+#/run/numberOfWorkers 4
+#
+# Initialize kernel
+/run/initialize
+#
+# /tracking/verbose 1
+#
+/gun/particle XXXXX
+/gun/energy YYYYY GeV
+
+/run/beamOn 10000
+
