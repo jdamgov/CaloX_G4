@@ -105,7 +105,8 @@ void B4PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   //  ->SetParticlePosition(G4ThreeVector(0., 0., -worldZHalfLength));
     ->SetParticlePosition(G4ThreeVector((ran1.flat()*4.-2.)*cm, (ran1.flat()*4.-2.)*cm, -worldZHalfLength));
 
-  fParticleGun ->SetParticleEnergy((500.+ran1.flat()*(Ebeam-500.))*MeV);
+  G4double gunEnergyEvent_ = (500.+ran1.flat()*(Ebeam-500.))*MeV;
+  fParticleGun ->SetParticleEnergy(gunEnergyEvent_);
   //fParticleGun ->SetParticleEnergy(Ebeam*MeV);
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
